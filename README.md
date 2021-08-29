@@ -1,12 +1,14 @@
 # BUG Dataset 
 A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation, Levy et al., EMNLP 2021.
 
+## Dataset Partitions
 
-## 🐞 Full BUG
 
-## 🪲 Gold BUG 
+### 🐞 Full BUG
 
-## 🐛 Balanced BUG
+### 🪲 Gold BUG 
+
+### 🐛 Balanced BUG
 
 
 ## Evaluations
