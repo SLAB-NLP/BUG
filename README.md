@@ -7,3 +7,4 @@ A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Transla
 ## 🐛 Balanced BUG
 
 ## Citing
+python evaluate_coref.py --in=../../predictions/coref_preds.jsonl --out=../../visualizations/delta_s_by_dist.png
