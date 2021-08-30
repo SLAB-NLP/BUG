@@ -4,9 +4,9 @@
 Options:
   --help                           Show this message and exit
   -i INPUT_FILE --in=INPUT_FILE    Input file
-                                   [default: infile.tmp]
+                                   [default: ../../predictions/coref_preds.jsonl]
   -o INPUT_FILE --out=OUTPUT_FILE  Input file
-                                   [default: outfile.tmp]
+                                   [default: ../../visualizations/delta_s_by_dist.png]
   --debug                          Whether to debug
 """
 # External imports
@@ -85,15 +85,20 @@ def get_delta_s_by_dist(dist_metric):
                                 len(ste) + len(ant)))
     return delta_s_by_dist
 
-def get_acc_by_dist(dist_metric):
+def get_simple_metric_by_dist(dist_metric, metric_name):
     """
-    Compute delta s by distance
+    Aggregate over a given metric by dist.
     """
     dists = sorted(dist_metric.keys())
-    acc_by_dist = []
+    met_by_dist = []
     for dist in dists:
-        acc_by_dist.append(get_acc(dist_metric[dist]["acc"]))
-    return acc_by_dist
+        met_by_dist.append(get_acc(dist_metric[dist][metric_name]))
+    return met_by_dist
+
+# Simple instantiations
+get_acc_by_dist = lambda dist_metric: get_simple_metric_by_dist(dist_metric, "acc")
+get_ste_by_dist = lambda dist_metric: get_simple_metric_by_dist(dist_metric, 1)
+get_ant_by_dist = lambda dist_metric: get_simple_metric_by_dist(dist_metric, -1)
 
 def average_buckets(b1, b2):
     """
@@ -162,10 +167,12 @@ if __name__ == "__main__":
     delta_s = get_acc(metrics["ste"]) - get_acc(metrics["ant"])
     delta_s_by_dist = get_delta_s_by_dist(metrics["distance"])
     acc_by_dist = get_acc_by_dist(metrics["distance"])
+    ste_by_dist = get_ste_by_dist(metrics["distance"])
+    ant_by_dist = get_ant_by_dist(metrics["distance"])
 
     # average last bucket
-    delta_s_by_dist[-2] = average_buckets(delta_s_by_dist[-2], delta_s_by_dist[-1])
-    delta_s_by_dist = delta_s_by_dist[:-1]
+    # delta_s_by_dist[-2] = average_buckets(delta_s_by_dist[-2], delta_s_by_dist[-1])
+    # delta_s_by_dist = delta_s_by_dist[:-1]
 
     logging.info(f"acc = {acc:.1f}; delta_g = {delta_g:.1f}; delta_s = {delta_s:.1f}")
     logging.info(f"delta s by dist = {delta_s_by_dist}")
@@ -179,12 +186,18 @@ if __name__ == "__main__":
     y_pos = np.arange(len(ranges))
     width = 1 # the width for the bars
 
+    plt.plot(y_pos, ste_by_dist, label = "stereotypical",
+             color = "orange", linestyle = "dashed")
+    plt.scatter(y_pos, ste_by_dist, color = "orange")
 
+    plt.plot(y_pos, ant_by_dist, label = "anti-stereotypical",
+             color = "blue", linestyle = "dotted")
+    plt.scatter(y_pos, ant_by_dist, color = "blue")
 
-    plt.bar(y_pos, values_ds, width, label="∆ s")
     plt.xticks(y_pos, ranges)
-    plt.ylabel("∆ s")
+    plt.ylabel("acc")
     plt.xlabel("distance [words] between pronoun and antecedent")
+    plt.legend()
     plt.tight_layout()
     plt.savefig(out_fn)
 
