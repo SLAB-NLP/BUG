@@ -195,7 +195,7 @@ if __name__ == "__main__":
     plt.scatter(y_pos, ant_by_dist, color = "blue")
 
     plt.xticks(y_pos, ranges)
-    plt.ylabel("acc")
+    plt.ylabel("coreference acc")
     plt.xlabel("distance [words] between pronoun and antecedent")
     plt.legend()
     plt.tight_layout()
