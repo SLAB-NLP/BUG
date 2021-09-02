@@ -4,7 +4,7 @@
 Options:
   --help                           Show this message and exit
   -i INPUT_FILE --in=INPUT_FILE    Input file
-                                   [default: infile.tmp]
+                                   [default: ../data/full_bug.csv]
   -o INPUT_FILE --out=OUTPUT_FILE  Input file
                                    [default: outfile.tmp]
   --debug                          Whether to debug
@@ -20,12 +20,25 @@ from tqdm import tqdm
 import numpy as np
 import json
 import pandas as pd
+import numpy as np
 
 
 # Local imports
 
 
 #----
+
+def dist_between_prof_ant(df):
+    """
+    Return average dist and std between profession and
+    antecedent in the given data frame.
+    """
+    dist = np.abs(df.profession_first_index - df.g_first_index)
+    ave = np.average(dist)
+    std = np.std(dist)
+    dist_dict = {"average": ave,
+                 "std": std}
+    return dist_dict
 
 if __name__ == "__main__":
 
@@ -43,7 +56,19 @@ if __name__ == "__main__":
 
     logging.info(f"Input file: {inp_fn}, Output file: {out_fn}.")
 
-    # Start computation
+    # Load data
+    df = pd.read_csv(inp_fn)
+
+    # Compute distance between pronoun and antecedent between
+    # dataset partitions
+    ste = df[df.stereotype == 1]
+    ant = df[df.stereotype == -1]
+
+    ste_dist = dist_between_prof_ant(ste)
+    ant_dist = dist_between_prof_ant(ant)
+    
+    logging.info("stereotype dist: {}".format(pformat(ste_dist)))
+    logging.info("anti-stereotype dist: {}".format(pformat(ant_dist)))
 
     
     # End
