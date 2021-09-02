@@ -2,3 +2,4 @@ matplotlib
 docopt
 tqdm
 numpy
+pandas

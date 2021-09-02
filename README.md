@@ -1,6 +1,11 @@
 # BUG Dataset 
 A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation, Levy et al., Findings of EMNLP 2021.
 
+## Setup
+
+1. Unzip data.tar.gz
+2. Setup a python 3.x environment and install requirements: `pip install -r requirements.txt`
+
 ## Dataset Partitions
 
 
