@@ -1,4 +1,4 @@
-#  BUG Dataset 🐞🪲🐛
+#  BUG Dataset <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="30" />
 A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation, Levy et al., Findings of EMNLP 2021.
 
 ## Setup
@@ -9,11 +9,11 @@ A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Transla
 ## Dataset Partitions
 
 
-### 🐞 Full BUG
+### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
 
-### 🪲 Gold BUG 
+### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
 
-### 🐛 Balanced BUG
+### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
 
 
 ## Evaluations
