@@ -93,12 +93,12 @@ def create_BUG(directory_path):
     new_data['predicted gender'] = new_data[['g']].apply(predict_gender, axis=1)
 
     new_data = drop_less_quality_data(new_data)
+    new_data = clean_columns(new_data)
 
     new_data.to_csv("data\\full_BUG.csv")
     professions = new_data['profession']
     distribution = professions.value_counts()
     distribution.to_csv("data/data_distribution.csv")
-    new_data = pd.read_csv("data/full_BUG.csv")
     create_balanced("data\\full_BUG.csv")
 
     with open('dropped_en.txt', 'r', encoding="utf8") as f:
@@ -144,6 +144,12 @@ def create_BUG(directory_path):
 
     print("Size of data: " + str(new_data.shape[0]))
     return new_data
+
+
+def clean_columns(df):
+    cleaned_df = df[['sentence_text', 'profession', 'g', 'profession_first_index', 'g_first_index',
+                     'predicted gender', 'stereotype', 'distance', 'num_of_pronouns', 'corpus', 'data_index']]
+    return cleaned_df
 
 
 def create_balanced(data_path):
