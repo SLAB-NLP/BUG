@@ -9,11 +9,14 @@ A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Transla
 ## Dataset Partitions
 
 ### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
+105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
 
 ### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
 
-### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
+1,720 sentences, the gold-quality human-validated samples.
 
+### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
+25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
 
 Column | Header                 | Description
 :-----:|------------------------|--------------------------------------------
