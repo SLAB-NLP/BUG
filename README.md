@@ -78,8 +78,8 @@ See below instructions for reproducing our evaluations on BUG.
 
 ### Filter from SPIKE
 1. Download the wanted [SPIKE](https://spike.apps.allenai.org/) csv files and save them all in the same directory (directory_path).
-2. Make sure the name of each file end with \_corpusquery.csv when `corpus` is the name of the SPIKE dataset and `x` is the number of query you entered on search (for example - myspikedata_wikipedia18.csv).
-3. From `src/evaluations/`, run `python Analyze.py directory_path.
+2. Make sure the name of each file end with `\_<corpusquery><x>.csv` where `corpus` is the name of the SPIKE dataset and `x` is the number of query you entered on search (for example - myspikedata_wikipedia18.csv).
+3. From `src/evaluations/`, run `python Analyze.py directory_path`.
 4. This should reproduce the full dataset and balanced dataset.
 
 ## Citing
