@@ -60,4 +60,6 @@ See below instructions for reproducing our evaluations on BUG.
 
 ## Citing
 
+Bibtex coming soon!
+
 
