@@ -14,7 +14,25 @@ BUG was collected semi-automatically from different real-world corpora, designed
 pip install -r requirements.txt
 ```
 
-## Dataset
+
+## Dataset Partitions
+
+**_NOTE:_**
+These partitions vary slightly from those reported in the paper due improvments and bug fixes post submission. 
+For reprducibility's sake, you can access the dataset from the submission [here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing).
+
+### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
+105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
+
+### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
+
+1,720 sentences, the gold-quality human-validated samples.
+
+### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
+25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
+
+
+## Dataset Format
 Each file in the data folder is a csv file adhering to the following format:
 
 
@@ -31,23 +49,6 @@ Column | Header                 | Description
 9      | num_of_pronouns        | Number of pronouns in the sentence
 10     | corpus                 | The corpus from which the sentence is taken
 11     | data_index             | The query index of the pattern of the sentence
-
-
-### Dataset Partitions
-
-**_NOTE:_**
-These partitions vary slightly from those reported in the paper due improvments and bug fixes post submission. 
-For reprducibility's sake, you can access the dataset from the submission [here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing).
-
-#### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
-105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
-
-#### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
-
-1,720 sentences, the gold-quality human-validated samples.
-
-#### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
-25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
 
 ## Evaluations
 See below instructions for reproducing our evaluations on BUG.
