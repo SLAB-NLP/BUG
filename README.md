@@ -61,7 +61,7 @@ Column | Header                 | Description
 4      | profession_first_index | Words offset of profession in sentence
 5      | g_first_index          | Words offset of pronoun in sentence
 6      | predicted gender       | 'male'/'female' determined by the pronoun
-7      | stereotype             | -1/0/1 for stereotype, neutral and anti-stereotype sentence
+7      | stereotype             | -1/0/1 for anti-stereotype, neutral and stereotype sentence
 8      | distance               | The abs distance in words between pronoun and profession
 9      | num_of_pronouns        | Number of pronouns in the sentence
 10     | corpus                 | The corpus from which the sentence is taken
