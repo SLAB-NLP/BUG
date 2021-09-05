@@ -33,6 +33,10 @@ Column | Header                 | Description
 
 ### Dataset Partitions
 
+**_NOTE:_**
+These partitions vary slightly from those reported in the paper due improvments and bug fixes post submission. 
+For reprducibility's sake, you can access the dataset from the submission [here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing).
+
 #### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
 105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
 
@@ -42,11 +46,6 @@ Column | Header                 | Description
 
 #### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
 25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
-
-**_NOTE:_**
-These partitions vary slightly from those reported in the paper due improvments and bug fixes post submission. 
-For reprducibility's sake, you can access the dataset from the submission [here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing).
-
 
 ## Evaluations
 See below instructions for reproducing our evaluations on BUG.
