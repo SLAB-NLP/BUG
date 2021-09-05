@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [BUG Dataset <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="30" />](#bug-dataset-img-srchttpsuser-imagesgithubusercontentcom6629995132018898-038ec717-264d-4da3-a0b8-651b851f6b64png-width30-img-srchttpsuser-imagesgithubusercontentcom6629995132017358-dea44bba-1487-464d-a9e1-4d534204570cpng-width30-img-srchttpsuser-imagesgithubusercontentcom6629995132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4png-width30-)
+  - [Setup](#setup)
+  - [Dataset Partitions](#dataset-partitions)
+    - [<img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG](#img-srchttpsuser-imagesgithubusercontentcom6629995132018898-038ec717-264d-4da3-a0b8-651b851f6b64png-width20--full-bug)
+    - [<img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG](#img-srchttpsuser-imagesgithubusercontentcom6629995132017358-dea44bba-1487-464d-a9e1-4d534204570cpng-width20--gold-bug)
+    - [<img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG](#img-srchttpsuser-imagesgithubusercontentcom6629995132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4png-width20--balanced-bug)
+  - [Dataset Format](#dataset-format)
+  - [Evaluations](#evaluations)
+    - [Coreference](#coreference)
+  - [Citing](#citing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 #  BUG Dataset <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="30" />
 A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation, Levy et al., Findings of EMNLP 2021.
 
