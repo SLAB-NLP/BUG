@@ -3,7 +3,7 @@ A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Transla
 
 ## Setup
 
-1. Unzip data.tar.gz -- this should create a `data` folder with the following files:
+1. Unzip `data.tar.gz` this should create a `data` folder with the following files:
    * balanced_BUG.csv
    * full_BUG.csv
    * gold_BUG.csv
@@ -31,7 +31,6 @@ Column | Header                 | Description
 11     | data_index             | The query index of the pattern of the sentence
 
 
-
 ### Dataset Partitions
 
 #### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
@@ -44,6 +43,9 @@ Column | Header                 | Description
 #### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
 25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
 
+**_NOTE:_**
+These partitions vary slightly from those reported in the paper due improvments and bug fixes post submission. 
+For reprducibility's sake, you can access the dataset from the submission [here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing).
 
 
 ## Evaluations
@@ -54,9 +56,6 @@ See below instructions for reproducing our evaluations on BUG.
 2. Unzip and put `coref_preds.jsonl` in in the `predictions/` folder.
 3. From `src/evaluations/`, run `python evaluate_coref.py --in=../../predictions/coref_preds.jsonl --out=../../visualizations/delta_s_by_dist.png`.
 4. This should reproduce the [coreference evaluation figure](visualizations/delta_s_by_dist.png).
-
-# Original data
-[here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing)
 
 ## Citing
 
