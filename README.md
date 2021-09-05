@@ -3,20 +3,18 @@ A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Transla
 
 ## Setup
 
-1. Unzip data.tar.gz
-2. Setup a python 3.x environment and install requirements: `pip install -r requirements.txt`
+1. Unzip data.tar.gz -- this should create a `data` folder with the following files:
+   * balanced_BUG.csv
+   * full_BUG.csv
+   * gold_BUG.csv
+2. Setup a python 3.x environment and install requirements:
+```
+pip install -r requirements.txt
+```
 
-## Dataset Partitions
+## Dataset
+Each file in the data folder is a csv file adhering to the following format:
 
-### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
-105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
-
-### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
-
-1,720 sentences, the gold-quality human-validated samples.
-
-### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
-25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
 
 Column | Header                 | Description
 :-----:|------------------------|--------------------------------------------
@@ -33,6 +31,21 @@ Column | Header                 | Description
 11     | data_index             | The query index of the pattern of the sentence
 
 
+
+### Dataset Partitions
+
+#### <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="20" /> Full BUG
+105,687 sentences with a human entity, identified by their profession and a gendered pronoun.
+
+#### <img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="20" /> Gold BUG 
+
+1,720 sentences, the gold-quality human-validated samples.
+
+#### <img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="20" /> Balanced BUG
+25,504 sentences, randomly sampled from Full BUG to ensure balance between male and female entities and between stereotypical and non-stereotypical gender role assignments.
+
+
+
 ## Evaluations
 See below instructions for reproducing our evaluations on BUG.
 
@@ -42,7 +55,8 @@ See below instructions for reproducing our evaluations on BUG.
 3. From `src/evaluations/`, run `python evaluate_coref.py --in=../../predictions/coref_preds.jsonl --out=../../visualizations/delta_s_by_dist.png`.
 4. This should reproduce the [coreference evaluation figure](visualizations/delta_s_by_dist.png).
 
-
+# Original data
+[here](https://drive.google.com/file/d/1b4Q-X1vVMoR-tIVd-XCigamnvpy0vi3F/view?usp=sharing)
 
 ## Citing
 
