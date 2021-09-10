@@ -83,7 +83,14 @@ See below instructions for reproducing our evaluations on BUG.
 4. This should reproduce the full dataset and balanced dataset.
 
 ## Citing
-
-Bibtex coming soon!
-
+```
+@misc{levy2021collecting,
+      title={Collecting a Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation}, 
+      author={Shahar Levy and Koren Lazar and Gabriel Stanovsky},
+      year={2021},
+      eprint={2109.03858},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
