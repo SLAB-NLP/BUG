@@ -18,7 +18,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 #  BUG Dataset <img src="https://user-images.githubusercontent.com/6629995/132018898-038ec717-264d-4da3-a0b8-651b851f6b64.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132017358-dea44bba-1487-464d-a9e1-4d534204570c.png" width="30" /><img src="https://user-images.githubusercontent.com/6629995/132018731-6ec8c4e3-12ac-474c-ae6c-03c1311777f4.png" width="30" />
-A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation, Levy et al., Findings of EMNLP 2021.
+A Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation (Levy et al., Findings of EMNLP 2021).
 
 BUG was collected semi-automatically from different real-world corpora, designed to be challenging in terms of soceital gender role assignements for machine translation and coreference resolution.
 
@@ -63,7 +63,7 @@ Column | Header                 | Description
 4      | profession_first_index | Words offset of profession in sentence
 5      | g_first_index          | Words offset of pronoun in sentence
 6      | predicted gender       | 'male'/'female' determined by the pronoun
-7      | stereotype             | -1/0/1 for stereotype, neutral and anti-stereotype sentence
+7      | stereotype             | -1/0/1 for anti-stereotype, neutral and stereotype sentence
 8      | distance               | The abs distance in words between pronoun and profession
 9      | num_of_pronouns        | Number of pronouns in the sentence
 10     | corpus                 | The corpus from which the sentence is taken
@@ -78,6 +78,7 @@ See below instructions for reproducing our evaluations on BUG.
 3. From `src/evaluations/`, run `python evaluate_coref.py --in=../../predictions/coref_preds.jsonl --out=../../visualizations/delta_s_by_dist.png`.
 4. This should reproduce the [coreference evaluation figure](visualizations/delta_s_by_dist.png).
 
+
 ## Conversions
 ### CoNLL
 To convert each data partition to CoNLL format run:
@@ -90,8 +91,22 @@ For example, try:
 python convert_to_conll.py --in=../../data/gold_BUG.csv --out=./gold_bug.conll
 ```
 
+### Filter from SPIKE
+1. Download the wanted [SPIKE](https://spike.apps.allenai.org/) csv files and save them all in the same directory (directory_path).
+2. Make sure the name of each file end with `\_<corpusquery><x>.csv` where `corpus` is the name of the SPIKE dataset and `x` is the number of query you entered on search (for example - myspikedata_wikipedia18.csv).
+3. From `src/evaluations/`, run `python Analyze.py directory_path`.
+4. This should reproduce the full dataset and balanced dataset.
+
+
 ## Citing
-
-Bibtex coming soon!
-
+```
+@misc{levy2021collecting,
+      title={Collecting a Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation}, 
+      author={Shahar Levy and Koren Lazar and Gabriel Stanovsky},
+      year={2021},
+      eprint={2109.03858},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
