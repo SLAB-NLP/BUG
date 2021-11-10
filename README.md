@@ -11,6 +11,8 @@
   - [Dataset Format](#dataset-format)
   - [Evaluations](#evaluations)
     - [Coreference](#coreference)
+  - [Conversions](#conversions)
+    - [CoNLL](#conll)
   - [Citing](#citing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -75,6 +77,18 @@ See below instructions for reproducing our evaluations on BUG.
 2. Unzip and put `coref_preds.jsonl` in in the `predictions/` folder.
 3. From `src/evaluations/`, run `python evaluate_coref.py --in=../../predictions/coref_preds.jsonl --out=../../visualizations/delta_s_by_dist.png`.
 4. This should reproduce the [coreference evaluation figure](visualizations/delta_s_by_dist.png).
+
+## Conversions
+### CoNLL
+To convert each data partition to CoNLL format run:
+```
+python convert_to_conll.py --in=path/to/input/file --out=path/to/output/file
+```
+
+For example, try:
+```
+python convert_to_conll.py --in=../../data/gold_BUG.csv --out=./gold_bug.conll
+```
 
 ## Citing
 
