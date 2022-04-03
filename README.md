@@ -59,16 +59,16 @@ Column | Header                 | Description
 :-----:|------------------------|--------------------------------------------
 1      | sentence_text          | Text of sentences with a human entity, identified by their profession and a gendered pronoun
 2      | tokens                 | List of tokens (using spacy tokenizer)
-2      | profession             | The entity in the sentence
-3      | g                      | The pronoun in the sentence
-4      | profession_first_index | Words offset of profession in sentence
-5      | g_first_index          | Words offset of pronoun in sentence
-6      | predicted gender       | 'male'/'female' determined by the pronoun
-7      | stereotype             | -1/0/1 for anti-stereotype, neutral and stereotype sentence
-8      | distance               | The abs distance in words between pronoun and profession
-9      | num_of_pronouns        | Number of pronouns in the sentence
-10     | corpus                 | The corpus from which the sentence is taken
-11     | data_index             | The query index of the pattern of the sentence
+3      | profession             | The entity in the sentence
+4      | g                      | The pronoun in the sentence
+5      | profession_first_index | Words offset of profession in sentence
+6      | g_first_index          | Words offset of pronoun in sentence
+7      | predicted gender       | 'male'/'female' determined by the pronoun
+8      | stereotype             | -1/0/1 for anti-stereotype, neutral and stereotype sentence
+9      | distance               | The abs distance in words between pronoun and profession
+10      | num_of_pronouns        | Number of pronouns in the sentence
+11     | corpus                 | The corpus from which the sentence is taken
+12     | data_index             | The query index of the pattern of the sentence
 
 ## Evaluations
 See below instructions for reproducing our evaluations on BUG.
